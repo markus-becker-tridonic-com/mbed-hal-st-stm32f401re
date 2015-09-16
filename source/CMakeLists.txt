@@ -19,7 +19,7 @@
 
 
 if(${CMAKE_C_COMPILER_ID} STREQUAL GNU)
-    set(STARTUP_ASM "bootstrap_gcc/startup_STM32F40x.s")
+    set(STARTUP_ASM "bootstrap_gcc/startup_stm32f401xe.s")
     set(STARTUP_SRC "")
 else()
     set(STARTUP_ASM "")
