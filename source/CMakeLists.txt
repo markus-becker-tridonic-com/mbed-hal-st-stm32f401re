@@ -35,14 +35,8 @@ set_property(SOURCE ${STARTUP_ASM} PROPERTY LANGUAGE ASM)
 add_library(mbed-hal-st-stm32f401re
     ${STARTUP_ASM}
     ${STARTUP_SRC}
-    "PeripheralPins.c"
+    "PeripheralPins.c mbed_overrides.c"
 )
-add_library(mbed-hal-st-stm32f401re
-    ${STARTUP_ASM}
-    ${STARTUP_SRC}
-    "mbed_overrides.c"
-)
-
 set_target_properties(mbed-hal-st-stm32f401re PROPERTIES
     LINKER_LANGUAGE C
 )
