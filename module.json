@@ -1,6 +1,6 @@
 {
   "name": "mbed-hal-st-stm32f401re",
-  "version": "0.0.0",
+  "version": "0.4.0",
   "description": "mbed HAL for stm32f401re microcontrollers",
   "keywords": [],
   "author": "Brendan Moran <brendan.moran@arm.com>",
@@ -19,8 +19,8 @@
     "mbed-hal-st-stm32f401re"
   ],
   "dependencies": {
-    "cmsis-core": "~0.2.0",
-    "uvisor-lib": "~0.7.0"
+    "cmsis-core": "^1.0.0",
+    "uvisor-lib": "^1.0.0"
   },
   "targetDependencies": {}
 }
