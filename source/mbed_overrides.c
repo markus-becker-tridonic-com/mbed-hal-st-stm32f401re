@@ -1,3 +1,4 @@
+#include <stdint.h>
 
 // from http://www.st.com/web/en/resource/technical/document/reference_manual/CD00171190.pdf chapter 30.2
 #define STM_UUID_REGISTER_BASE_ADDRESS 0x1FFFF7E8
