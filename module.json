@@ -1,9 +1,19 @@
 {
   "name": "mbed-hal-st-stm32f401re",
-  "version": "0.4.0-tri-0.0.5",
+  "version": "0.4.3-tri-0.4.0",
   "description": "mbed HAL for stm32f401re microcontrollers",
-  "keywords": [],
-  "author": "Brendan Moran <brendan.moran@arm.com>",
+  "keywords": [
+    "mbed",
+    "hal",
+    "stm",
+    "f401re",
+    "nucleo"
+  ],
+  "author": "wolfgang.betz@st.com",
+  "repository": {
+    "url": "https://github.com/ARMmbed/mbed-hal-st-stm32f401re.git",
+    "type": "git"
+  },
   "homepage": "https://github.com/ARMmbed/mbed-hal-st-stm32f401re",
   "licenses": [
     {
@@ -19,8 +29,9 @@
     "mbed-hal-st-stm32f401re"
   ],
   "dependencies": {
-    "cmsis-core": "tridonic-com/cmsis-core#1.1.0-tri-0.0.5",
-    "uvisor-lib": "^1.0.0"
+    "cmsis-core": "tridonic-com/cmsis-core#b1.2.0-tri-0.4.0",
+    "uvisor-lib": ">=1.0.0,<3.0.0",
+    "mbed-hal-st-stm32f4": ">=1.0.4"
   },
   "targetDependencies": {}
 }
