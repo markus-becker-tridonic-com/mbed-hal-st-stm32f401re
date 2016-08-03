@@ -25,7 +25,7 @@
     "mbed-hal-st-stm32f401re"
   ],
   "dependencies": {
-    "cmsis-core": "tridonic-com/cmsis-core#1.2.0-tri-0.5.2",
+    "cmsis-core": "tridonic-com/cmsis-core#b1.2.0-tri-0.8.0",
     "uvisor-lib": ">=1.0.0,<3.0.0",
     "mbed-hal-st-stm32f4": ">=1.0.4"
   },
