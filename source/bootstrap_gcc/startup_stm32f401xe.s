@@ -72,11 +72,31 @@ defined in linker script */
  * @param  None
  * @retval : None
 */
+    .section .rodata
+StartPattern: .asciz "n4mBL_T"
 
     .section  .text.Reset_Handler
   .weak  Reset_Handler
   .type  Reset_Handler, %function
 Reset_Handler:
+  ldr   sp, =__stack       /* set stack pointer */
+
+// Check if start pattern of boot-loader present
+  ldr r0, =__start_pattern
+  ldr r1, =StartPattern
+
+StringCompareLoop:
+  LDRB    r2, [r0],#1
+  LDRB    r3, [r1],#1
+  cmp r2, r3
+  BNE Start_mbed
+  cmp r3, #0
+  BNE StringCompareLoop
+
+JumpToBooloader:
+  blx    __bootloader
+
+Start_mbed:
   ldr   sp, =__stack       /* set stack pointer */
 
 /* Copy the data segment initializers from flash to SRAM */
@@ -453,5 +473,6 @@ g_pfnVectors:
 
    .weak      SPI4_IRQHandler
    .thumb_set SPI4_IRQHandler,Default_Handler
+
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
